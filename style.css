@@ -9,6 +9,8 @@
   --color-grey: #616161;
   --color-light-grey: #7c7979;
   --color-navy: #0f4c81;
+  --color-light-green: #6dc1ba;
+  --color-soft-blue: #368ca1;
   --color-coral: #ff6f61;
   --color-black: #000000;
   --color-brown-grey: #938983;
@@ -68,6 +70,7 @@ h1 {
   font-weight: var(--weight-bold);
   color: var(--color-black);
   margin: 16px 0;
+  text-shadow: 2px 2px 4px #2c2c2c;
 }
 h2 {
   font-size: var(--font-medium);
@@ -303,6 +306,50 @@ p {
   margin: 0 auto;
   margin-top: 13px;
   background-color: var(--color-brown-grey);
+}
+
+/* Contact me */
+#contact {
+  background-color: var(--color-navy);
+  padding: 5px 0px;
+}
+#contact h1,
+#contact h2,
+.contact__description,
+.contact__links i {
+  color: var(--color-white);
+}
+.contact__title {
+  margin-bottom: 2px;
+}
+.contact__description {
+  width: 200px;
+  font-size: var(--font-regular);
+  font-weight: var(--weight-semi-bold);
+  background-color: var(--color-light-green);
+  margin: 0 auto;
+  padding: 5px 0px;
+}
+.contact__container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 20px 0px;
+}
+.contact__email {
+  margin-right: 100px;
+}
+.contact__links {
+  margin-bottom: 10px;
+}
+.contact__links i {
+  font-size: var(--font-medium);
+  padding: 0px 7px;
+}
+
+.contact__links i:hover {
+  transform: scale(1.2);
+  color: var(--color-light-green);
 }
 
 /* Arrow up */
