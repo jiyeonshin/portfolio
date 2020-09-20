@@ -118,7 +118,6 @@ p {
   font-size: var(--font-regular);
   font-weight: var(--weight-semi-bold);
   color: var(--color-navy);
-  xposition: relative;
 }
 
 .navbar__menu__item {
@@ -164,7 +163,6 @@ p {
 .home__description {
   color: var(--color-light-white);
   text-align: center;
-  padding-left: 50px;
   position: absolute;
 }
 
@@ -182,7 +180,7 @@ p {
 .home__contact-container {
   width: 100%;
   text-align: center;
-  animation: home__contact-move 1.5s infinite;
+  xanimation: home__contact-move 1.5s infinite;
   position: absolute;
 }
 
@@ -204,4 +202,127 @@ p {
   100% {
     bottom: 30px;
   }
+}
+
+/* Section common */
+.section {
+  padding: 50px;
+  text-align: center;
+  margin: auto;
+}
+
+.section__container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* About me */
+#about {
+  background-color: var(--color-light-white);
+}
+#about p {
+  margin-bottom: 50px;
+}
+.about__majors {
+  display: flex;
+  justify-content: space-between;
+}
+.major {
+  display: flex;
+  text-align: center;
+}
+
+.major__left {
+  position: relative;
+}
+.major__icon {
+  font-size: var(--font-large);
+  margin-right: 20px;
+}
+.major__icon::before {
+  content: "";
+  position: absolute;
+  left: 23px;
+  top: 22px;
+  width: 1px;
+  height: calc(100% - 25px);
+  background-color: var(--color-black);
+}
+.major__icon::after {
+  content: "";
+  position: absolute;
+  left: 18px;
+  bottom: 2px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: var(--color-black);
+}
+.major__descriptioin {
+  font-size: var(--font-regular);
+  padding-top: 5px;
+}
+.major:hover i,
+.major__icon::before,
+.major__icon::after {
+  color: var(--color-navy);
+}
+
+/* Skills */
+.skillset__up,
+.skillset__down {
+  display: flex;
+  justify-content: space-between;
+}
+.skillset__up {
+  margin-bottom: 30px;
+}
+
+.skill {
+  width: 200px;
+  height: 200px;
+  background-color: coral;
+  border: 1px solid;
+}
+
+.skill_bar {
+  width: 150px;
+  height: 150px;
+  border: 1px solid;
+  border-radius: 50%;
+  background-color: darkgoldenrod;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.skill__value {
+  width: 120px;
+  height: 120px;
+  border: 1px solid;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 13px;
+  background-color: var(--color-brown-grey);
+}
+
+/* Arrow up */
+#arrow__up {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  font-size: 50px;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  color: var(--color-navy);
+  border: 3px solid var(--color-navy);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all var(--animation-duration) ease-in;
+}
+
+#arrow__up.visible {
+  opacity: 1;
+  pointer-events: auto;
 }
