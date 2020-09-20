@@ -251,10 +251,10 @@ p {
 
 @keyframes slideup {
   0% {
-    margin-top: 800px;
+    margin-top: 500px;
   }
   20% {
-    margin-top: 800px;
+    margin-top: 500px;
   }
   35% {
     margin-top: 0px;
@@ -329,40 +329,135 @@ p {
 }
 
 /* Skills */
-.skillset__up,
-.skillset__down {
+#skills h1 {
+  margin-bottom: 40px;
+}
+
+.skills__container {
   display: flex;
   justify-content: space-between;
-}
-.skillset__up {
-  margin-bottom: 30px;
+  align-items: center;
 }
 
-.skill {
-  width: 200px;
-  height: 200px;
-  background-color: coral;
-  border: 1px solid;
+.skill__card {
+  position: relative;
+  width: 250px;
+  background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  border-radius: 4px;
+  text-align: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.skill__card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  pointer-events: none;
+  z-index: 1;
 }
 
-.skill_bar {
+.skill__card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.skill__percent {
+  position: relative;
   width: 150px;
   height: 150px;
-  border: 1px solid;
   border-radius: 50%;
-  background-color: darkgoldenrod;
-  margin: 0 auto;
-  margin-top: 20px;
+  box-shadow: inset 0 0 50px #000;
+  background: #222;
+  z-index: 1000;
+}
+.skill__value {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
 }
 
-.skill__value {
-  width: 120px;
-  height: 120px;
-  border: 1px solid;
-  border-radius: 50%;
-  margin: 0 auto;
-  margin-top: 13px;
-  background-color: var(--color-brown-grey);
+.skill__value h2 {
+  color: #777;
+  font-weight: var(--weight-bold);
+  font-size: 40px;
+  transition: 0.5s;
+}
+
+.skill__value h2 span {
+  font-size: 24px;
+  color: #777;
+  transition: 0.5s;
+}
+
+.skill__title {
+  position: relative;
+  color: #777;
+  margin-top: 20px;
+  font-weight: var(--weight-bold);
+  font-size: var(--font-regular);
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+
+.skill__card:hover .skill__value h2 {
+  color: var(--color-white);
+  font-size: 50px;
+}
+
+.skill__card:hover .skill__value h2 span,
+.skill__card:hover .skill__title {
+  color: var(--color-white);
+}
+
+svg {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  z-index: 1000;
+}
+
+svg circle {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: var(--color-black);
+  stroke-width: 10;
+  stroke-linecap: round;
+  transform: translate(5px, 5px);
+}
+
+svg circle:nth-child(2) {
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+}
+
+.skill__card:nth-child(1) svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 90) / 100);
+  stroke: #00ff43;
+}
+
+.skill__card:nth-child(2) svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 60) / 100);
+  stroke: #00a1ff;
+}
+
+.skill__card:nth-child(3) svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 40) / 100);
+  stroke: #ff04f7;
 }
 
 /* My work */
