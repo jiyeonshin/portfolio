@@ -121,7 +121,8 @@ p {
   display: flex;
   font-size: var(--font-regular);
   font-weight: var(--weight-semi-bold);
-  color: var(--color-navy);
+  xcolor: var(--color-navy);
+  color: var(--color-white);
 }
 
 .navbar__menu__item {
@@ -139,7 +140,8 @@ p {
   width: 0;
   height: 5px;
   border-radius: 50%;
-  background: var(--color-navy);
+  xbackground: var(--color-navy);
+  background: var(--color-white);
 }
 
 .navbar__menu__item span {
@@ -278,7 +280,7 @@ p {
 
 /* About me */
 #about {
-  background-color: var(--color-light-white);
+  xbackground-color: var(--color-light-white);
 }
 #about p {
   margin-bottom: 50px;
@@ -329,6 +331,10 @@ p {
 }
 
 /* Skills */
+#skills {
+  background-color: var(--color-light-white);
+}
+
 #skills h1 {
   margin-bottom: 40px;
 }
@@ -451,16 +457,20 @@ svg circle:nth-child(2) {
 }
 
 .skill__card:nth-child(2) svg circle:nth-child(2) {
-  stroke-dashoffset: calc(440 - (440 * 60) / 100);
+  stroke-dashoffset: calc(440 - (440 * 80) / 100);
   stroke: #00a1ff;
 }
 
 .skill__card:nth-child(3) svg circle:nth-child(2) {
-  stroke-dashoffset: calc(440 - (440 * 40) / 100);
+  stroke-dashoffset: calc(440 - (440 * 70) / 100);
   stroke: #ff04f7;
 }
 
 /* My work */
+#work h1 {
+  margin-bottom: 50px;
+}
+
 .work__projects {
   display: flex;
   flex-wrap: wrap;
