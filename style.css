@@ -170,17 +170,43 @@ p {
   position: absolute;
 }
 
+.home__title-container {
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  letter-spacing: 1px;
+}
+
 .home__title {
   font-size: 120px;
-  width: 100%;
-  bottom: 40%;
-  transform: translateY();
+  top: 350px;
+  animation: slidedown 5s;
+  animation-iteration-count: 1;
 }
+
 .home__description {
-  font-size: 60px;
-  width: 100%;
-  bottom: 34%;
+  font-size: 70px;
+  top: 500px;
+  background-position: center;
+  animation: slideup 5s;
+  animation-iteration-count: 1;
 }
+
+.home__title,
+.home__description {
+  width: 100%;
+  background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+  background-size: cover;
+  color: transparent;
+  line-height: 0.75;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+}
+
 .home__contact-container {
   width: 100%;
   text-align: center;
@@ -205,6 +231,36 @@ p {
 
   100% {
     bottom: 30px;
+  }
+}
+
+@keyframes slidedown {
+  0% {
+    margin-top: -800px;
+  }
+  20% {
+    margin-top: -800px;
+  }
+  35% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: 0px;
+  }
+}
+
+@keyframes slideup {
+  0% {
+    margin-top: 800px;
+  }
+  20% {
+    margin-top: 800px;
+  }
+  35% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: 0px;
   }
 }
 
