@@ -36,6 +36,18 @@ homeContactBtn.addEventListener("click", (e) => {
   scrollIntoView("#contact");
 });
 
+// About arrow up button
+// show arrow button when scrolling down
+const arrowUpBtn = document.querySelector("#arrow__up");
+
+document.addEventListener("scroll", () => {
+  if (scrollY > homeHeight / 2) {
+    arrowUpBtn.classList.add("visible");
+  } else {
+    arrowUpBtn.classList.remove("visible");
+  }
+});
+
 // function : scrolling
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
