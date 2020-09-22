@@ -102,7 +102,12 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 1;
+  transition: all var(--animation-duration) ease-in-out;
+  z-index: 2000;
+}
+#navbar.navbar__dark {
+  background-color: var(--color-navy);
+  padding: 8px;
 }
 
 #logo {
@@ -123,6 +128,9 @@ p {
   font-weight: var(--weight-semi-bold);
   xcolor: var(--color-navy);
   color: var(--color-white);
+}
+.navbar__menu.open {
+  display: block;
 }
 
 .navbar__menu__item {
@@ -163,6 +171,7 @@ p {
   width: 100%;
   height: 800px;
   position: relative;
+  overflow: hidden;
 }
 
 .home__title,
@@ -279,9 +288,6 @@ p {
 }
 
 /* About me */
-#about {
-  xbackground-color: var(--color-light-white);
-}
 #about p {
   margin-bottom: 50px;
 }
