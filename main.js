@@ -1,7 +1,4 @@
 "use strict";
-/* To-do
-1. navbar : when click menu item, active change
- */
 const navbar = document.querySelector("#navbar");
 const navbarHeight = navbar.getBoundingClientRect().height;
 
@@ -24,7 +21,6 @@ document.addEventListener("scroll", () => {
 const navbarMenu = document.querySelector(".navbar__menu");
 const navbarMenuItem = document.querySelectorAll(".navbar__menu__item");
 
-// console.log(navbarMenuItem);
 let previousTarget = null;
 navbarMenu.addEventListener("click", (event) => {
   const target = event.target;
@@ -34,7 +30,11 @@ navbarMenu.addEventListener("click", (event) => {
     return;
   }
   scrollIntoView(link);
+
   // when click navbar menu item, dot move to that menu item
+  if (previousTarget == null) {
+    previousTarget = target;
+  }
   if (target == previousTarget) {
     return;
   }
