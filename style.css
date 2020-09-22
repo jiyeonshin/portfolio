@@ -276,6 +276,10 @@ p {
 }
 
 /* Section common */
+section {
+  padding: 100px 0px;
+}
+
 .section {
   padding: 50px;
   text-align: center;
