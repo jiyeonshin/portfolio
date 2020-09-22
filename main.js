@@ -39,13 +39,17 @@ homeContactBtn.addEventListener("click", (e) => {
 // About arrow up button
 // show arrow button when scrolling down
 const arrowUpBtn = document.querySelector("#arrow__up");
-
 document.addEventListener("scroll", () => {
   if (scrollY > homeHeight / 2) {
     arrowUpBtn.classList.add("visible");
   } else {
     arrowUpBtn.classList.remove("visible");
   }
+});
+
+// when click arrow btn move to home
+arrowUpBtn.addEventListener("click", (e) => {
+  scrollIntoView("#home");
 });
 
 // function : scrolling
