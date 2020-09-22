@@ -1,3 +1,11 @@
+/* To-do 
+1. arrow btn color change
+2. About me : change the design
+3. skills : change the other shape
+4. navbar : when change bg, change the logo shape
+5. change font style
+*/
+
 /* Global */
 
 :root {
@@ -44,6 +52,7 @@ body {
   xfont-family: "Open Sans", sans-serif;
   xfont-family: "Nanum Gothic Coding", monospace;
   font-family: "Maven Pro", sans-serif;
+
   cursor: default;
 }
 
@@ -148,17 +157,7 @@ p {
   width: 0;
   height: 5px;
   border-radius: 50%;
-  xbackground: var(--color-navy);
   background: var(--color-white);
-}
-
-.navbar__menu__item span {
-  display: inline-block;
-  padding: 5px 8px;
-}
-.navbar__menu__item span:hover {
-  transform: rotateX(360deg);
-  transition: all 400ms ease-in-out;
 }
 
 .navbar__menu__item.active::after {

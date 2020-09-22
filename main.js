@@ -1,5 +1,7 @@
 "use strict";
-
+/* To-do
+1. navbar : when click menu item, active change
+ */
 const navbar = document.querySelector("#navbar");
 const navbarHeight = navbar.getBoundingClientRect().height;
 
@@ -17,17 +19,31 @@ document.addEventListener("scroll", () => {
   }
 });
 
+// when click navbar menu item, active
 // Handle scrolling when tapping on the navbar menu
 const navbarMenu = document.querySelector(".navbar__menu");
+const navbarMenuItem = document.querySelectorAll(".navbar__menu__item");
 
+// console.log(navbarMenuItem);
+let previousTarget = null;
 navbarMenu.addEventListener("click", (event) => {
   const target = event.target;
-  const link = target.dataset.link || target.parentNode.dataset.link;
+  const link = target.dataset.link;
+
   if (link == null) {
     return;
   }
-
   scrollIntoView(link);
+  // when click navbar menu item, dot move to that menu item
+  if (target == previousTarget) {
+    return;
+  }
+  const active = target.classList.contains("active");
+  if (!active) {
+    target.classList.add("active");
+    previousTarget.classList.remove("active");
+  }
+  previousTarget = target;
 });
 
 // when click home contact button, move to contact section
