@@ -13,7 +13,7 @@
   --color-white: #ffffff;
   --color-light-white: #eeeeee;
   --color-dark-white: #bdbdbd;
-  --color-dark-grey: #4e4b4d;
+  --color-dark-grey: #2a2a2a;
   --color-grey: #616161;
   --color-light-grey: #7c7979;
   --color-main-purple: #b29ddb;
@@ -28,6 +28,7 @@
   --color-serenity: #92a8d1;
 
   /* Font size */
+  --font-mega : 72px;
   --font-large: 48px;
   --font-medium: 28px;
   --font-regular: 18px;
@@ -56,7 +57,8 @@ body {
   xfont-family: "Open Sans", sans-serif;
   xfont-family: "Nanum Gothic Coding", monospace;
   font-family: "Maven Pro", sans-serif;
-
+  xbackground-color: var(--color-dark-grey);
+  background: url(/home_icon/entire_bg.png) center/cover no-repeat;
   cursor: default;
 }
 
@@ -81,7 +83,10 @@ button {
 h1 {
   font-size: var(--font-large);
   font-weight: var(--weight-bold);
-  color: var(--color-black);
+  xxcolor: var(--color-black);
+  background: linear-gradient(to left,var(--color-serenity) 40%,var(--color-rose-quartz) 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   margin: 16px 0;
 }
 
@@ -148,13 +153,16 @@ section {
 /* Home */
 #home {
   xbackground-color: var(--color-main-purple);
-  background: url(/home_icon/homeBG.png) center/cover no-repeat;
+  x background: url(/home_icon/homeBG.png) center/cover no-repeat;
   text-align: center;
   color: var(--color-light-white);
   height: 700px;
 }
 .home__title {
+  font-size: var(--font-mega);
+  font-weight: var(--weight-bold);
   color: var(--color-light-white);
+  
 }
 .home__icons-container {
   display: flex;
@@ -162,12 +170,12 @@ section {
   margin-bottom: 50px;
 }
 .icon {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   border: 3px solid var(--color-light-white);
   border-radius: 50%;
   display: block;
-  margin: 2%;
+  margin: 3%;
 }
 
 .icon1 {
@@ -198,6 +206,38 @@ section {
 
 /* Skills */
 #skills {
+  color: var(--color-light-white);
+  font-size: var(--font-medium);
+  
+}
+.skillset{
+  width: 800px;
+  margin: 0 auto;
+  font-weight: var(--weight-semi-bold);
+}
+.skill__description{
+  display: flex;
+  justify-content: space-between;
+}
+.skill__description span{
+  margin: 2%;
+}
+.skill__bar {
+  width: 100%;
+  height: 5px;
+  background-color: var(--color-grey);
+}
+.skill__value {
+  width: 100%;
+  height: 5px;
+  
+}
+.skill__bar__serenity{
+  background-color: var(--color-serenity);
+}
+
+.skill__bar__rose{
+  background-color: var(--color-rose-quartz);
 }
 
 /* My work */
@@ -315,8 +355,8 @@ section {
   width: 70px;
   height: 70px;
   line-height: 70px;
-  color: var(--color-navy);
-  border: 3px solid var(--color-navy);
+  color: var(--color-rose-quartz);
+  border: 3px solid var(--color-serenity);
   border-radius: 50%;
   opacity: 0;
   pointer-events: none;
