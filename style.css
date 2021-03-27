@@ -190,19 +190,7 @@ section {
   border-radius: 10px;
   padding: 10px;
 }
-.xcontact-icon {
-  font-size: var(--font-medium);
-  border: 3px solid var(--color-dark-purple);
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  cursor: pointer;
-  color: var(--color-main-purple);
-  background-color: var(--color-light-white);
-}
-.contact-icon {
-  font-size: var(--font-medium);
-}
+
 .home__contact:hover {
   color: var(--color-serenity);
   border: 2px solid var(--color-serenity);
