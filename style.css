@@ -189,6 +189,10 @@ section {
   border-radius: 50%;
   margin: 3%;
   position: relative;
+  transition: all var(--animation-duration) ease;
+}
+.home__icon__bg:hover {
+  transform: translateY(-5%);
 }
 .home__icon-color {
   background-color: var(--color-rose-quartz);
@@ -210,6 +214,9 @@ section {
 .icon1 {
   background: url(/home_icon/coding_icon.png) center/cover no-repeat;
 }
+.icon:hover {
+  transform: scale(1.1);
+}
 
 .icon2 {
   background: url(/home_icon/mock-up.png) center/cover no-repeat;
@@ -218,7 +225,9 @@ section {
 .icon3 {
   background: url(/home_icon/git_logo.png) center/cover no-repeat;
 }
-
+.home__contact-container {
+  display: inline;
+}
 .home__contact {
   color: var(--color-light-white);
   font-size: var(--font-regular);
