@@ -16,11 +16,16 @@
   --color-dark-grey: #4e4b4d;
   --color-grey: #616161;
   --color-light-grey: #7c7979;
-  --color-main-purple:#b29ddb
-  --color-light-purple : #e5ceff;
-  --color-dark-purple:#826fa9
+  --color-main-purple: #b29ddb;
+  --color-light-purple: #e5ceff;
+  --color-dark-purple: #826fa9;
   --color-black: #000000;
   --color-brown-grey: #938983;
+  --color-light-blue: #90caf9;
+  --color-illuminating-yellow: #f5df4d;
+  --color-ultimate-grey: #939597;
+  --color-rose-quartz: #f7cac9;
+  --color-serenity: #92a8d1;
 
   /* Font size */
   --font-large: 48px;
@@ -100,19 +105,6 @@ p {
   color: var(--color-black);
   margin: 4px 0;
 }
-
-/* Navbar */
-#navbar {
-  
-}
-
-/* Home */
-#home {
- 
-}
-
-
-
 /* Section common */
 section {
   padding: 100px 0px;
@@ -129,12 +121,96 @@ section {
   margin: auto;
 }
 
-/* Skills */
-#skills {
-
+/* Navbar */
+#navbar {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  color: var(--color-light-white);
+}
+.navbar__logo {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+}
+.navbar__menu {
+  display: flex;
+  font-size: var(--font-regular);
+  cursor: pointer;
+}
+.navbar__menu__item {
+  padding: 8px 12px;
+  margin: 0 4px;
 }
 
+/* Home */
+#home {
+  xbackground-color: var(--color-main-purple);
+  background: url(/home_icon/homeBG.png) center/cover no-repeat;
+  text-align: center;
+  color: var(--color-light-white);
+  height: 700px;
+}
+.home__title {
+  color: var(--color-light-white);
+}
+.home__icons-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.icon {
+  width: 200px;
+  height: 200px;
+  border: 3px solid var(--color-light-white);
+  border-radius: 50%;
+  display: block;
+  margin: 2%;
+}
 
+.icon1 {
+  background: url(/home_icon/coding_icon.png) center/cover no-repeat;
+}
+
+.icon2 {
+  background: url(/home_icon/mock-up.png) center/cover no-repeat;
+}
+
+.icon3 {
+  background: url(/home_icon/git_logo.png) center/cover no-repeat;
+}
+
+.home__contact {
+  color: var(--color-light-white);
+  font-size: var(--font-regular);
+  font-weight: var(--weight-semi-bold);
+  border: 2px solid var(--color-light-white);
+  border-radius: 10px;
+  padding: 10px;
+}
+.xcontact-icon {
+  font-size: var(--font-medium);
+  border: 3px solid var(--color-dark-purple);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--color-main-purple);
+  background-color: var(--color-light-white);
+}
+.contact-icon {
+  font-size: var(--font-medium);
+}
+.home__contact:hover {
+  color: var(--color-serenity);
+  border: 2px solid var(--color-serenity);
+}
+
+/* Skills */
+#skills {
+}
 
 /* My work */
 #work h1 {
