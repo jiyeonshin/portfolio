@@ -83,7 +83,6 @@ button {
 h1 {
   font-size: var(--font-large);
   font-weight: var(--weight-bold);
-  xxcolor: var(--color-black);
   background: linear-gradient(
     to left,
     var(--color-serenity) 40%,
@@ -140,9 +139,22 @@ section {
   background-color: transparent;
   color: var(--color-light-white);
 }
+#logo {
+}
 .navbar__logo {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
+  border: 3px solid var(--color-light-white);
+  border-radius: 50%;
+  padding: 0.5%;
+  margin: 15px 0 0 15px;
+}
+.logo__j {
+  color: var(--color-rose-quartz);
+}
+
+.logo__y {
+  color: var(--color-serenity);
 }
 .navbar__menu {
   display: flex;
