@@ -168,12 +168,17 @@ section {
   padding: 8px 12px;
   margin: 0 4px;
   border-radius: var(--size-border-radius);
+
+  border: 1px solid transparent;
 }
+
 .navbar__menu__item.active {
-  border: 1px solid var(--color-light-white);
+  border: 1px solid var(--color-white);
 }
+
 .navbar__menu__item:hover {
   background-color: var(--color-serenity);
+  border: 1px solid var(--color-light-white);
 }
 
 /* navbar__toggle-btn */
@@ -260,7 +265,7 @@ section {
   font-size: var(--font-regular);
   font-weight: var(--weight-semi-bold);
   border: 2px solid var(--color-light-white);
-  border-radius: 10px;
+  border-radius: var(--size-border-radius);
   padding: 10px;
 }
 
@@ -304,6 +309,9 @@ section {
 }
 
 /* My work */
+#work {
+  margin-bottom: 100px;
+}
 #work h1 {
   margin-bottom: 50px;
 }
@@ -443,12 +451,14 @@ section {
 
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
+  /* navbar */
   .navbar__toggle-btn {
     display: block;
   }
   #navbar {
     flex-direction: column;
     align-items: flex-start;
+    background-color: #4a4a4a;
   }
   .navbar__menu {
     flex-direction: column;
@@ -456,7 +466,59 @@ section {
     width: 100%;
     display: none;
   }
+  .navbar__menu.open {
+    display: block;
+  }
+
+  /* home section */
+  #home {
+    padding: 200px 50px 0 50px;
+    height: 600px;
+  }
+  .home__title {
+    font-size: var(--font-medium);
+  }
+  .icon__container {
+    width: 130px;
+    height: 130px;
+  }
   .home__icon__bg {
     flex-direction: column;
+  }
+  .home__contact {
+    font-size: var(--font-small);
+    color: var(--color-light-white);
+    font-weight: var(--weight-regular);
+    border: 2px solid var(--color-light-white);
+    border-radius: var(--size-border-radius);
+    padding: 6px;
+  }
+
+  /* skill section */
+  #skills {
+    font-size: var(--font-regular);
+  }
+  .skillset {
+    width: 100%;
+  }
+
+  /* contact me */
+  h1 {
+    font-size: var(--font-medium);
+  }
+  h2 {
+    font-size: var(--font-regular);
+  }
+  .contact__container {
+    padding: 0 10px;
+  }
+  #arrow__up {
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    line-height: 30px;
+  }
+  .project {
+    flex-grow: 1;
   }
 }
