@@ -504,4 +504,11 @@ section {
     width: 90%;
     margin: 0 auto;
   }
+
+  #arrow__up {
+    font-size: 20px;
+    width: 35px;
+    height: 35px;
+    line-height: 20px;
+  }
 }
