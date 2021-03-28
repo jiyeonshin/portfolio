@@ -450,7 +450,7 @@ section {
 }
 
 /* For below 768px screen width */
-@media screen (min-width: 421px) and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   /* navbar */
   .navbar__toggle-btn {
     display: block;
@@ -527,5 +527,75 @@ section {
   .home__icons-container {
     flex-direction: column;
     align-items: center;
+  }
+
+  /* navbar */
+  .navbar__toggle-btn {
+    display: block;
+  }
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #4a4a4a;
+  }
+  .navbar__menu {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    display: none;
+  }
+  .navbar__menu.open {
+    display: block;
+  }
+
+  /* home section */
+  #home {
+    padding: 200px 50px 0 50px;
+    height: 600px;
+  }
+  .home__title {
+    font-size: var(--font-medium);
+  }
+  .icon__container {
+    flex-direction: column;
+    width: 130px;
+    height: 130px;
+  }
+
+  .home__contact {
+    font-size: var(--font-small);
+    color: var(--color-light-white);
+    font-weight: var(--weight-regular);
+    border: 2px solid var(--color-light-white);
+    border-radius: var(--size-border-radius);
+    padding: 6px;
+  }
+
+  /* skill section */
+  #skills {
+    font-size: var(--font-regular);
+  }
+  .skillset {
+    width: 100%;
+  }
+
+  /* contact me */
+  h1 {
+    font-size: var(--font-medium);
+  }
+  h2 {
+    font-size: var(--font-regular);
+  }
+  .contact__container {
+    padding: 0 10px;
+  }
+  #arrow__up {
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    line-height: 30px;
+  }
+  .project {
+    flex-grow: 1;
   }
 }
