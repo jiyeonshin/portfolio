@@ -428,8 +428,8 @@ section {
   width: 70px;
   height: 70px;
   line-height: 70px;
-  color: var(--color-rose-quartz);
-  border: 3px solid var(--color-serenity);
+  color: var(--color-light-white);
+  border: 3px solid var(--color-light-white);
   border-radius: 50%;
   opacity: 0;
   pointer-events: none;
