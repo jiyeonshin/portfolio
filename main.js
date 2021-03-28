@@ -28,6 +28,7 @@ navbarMenu.addEventListener("click", (event) => {
   if (link == null) {
     return;
   }
+  navbarMenu.classList.remove('open');
   scrollIntoView(link);
 
   // when click navbar menu item, dot move to that menu item
@@ -45,6 +46,11 @@ navbarMenu.addEventListener("click", (event) => {
   previousTarget = target;
 });
 
+//Navbar toggle button for small button
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', ()=>{
+  navbarMenu.classList.toggle('open');
+});
 // when click home contact button, move to contact section
 const homeContactBtn = document.querySelector(".home__contact-container");
 homeContactBtn.addEventListener("click", (e) => {

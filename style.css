@@ -164,6 +164,7 @@ section {
   font-size: var(--font-regular);
   cursor: pointer;
 }
+
 .navbar__menu__item {
   padding: 8px 12px;
   margin: 0 4px;
@@ -455,6 +456,9 @@ section {
     text-align: center;
     width: 100%;
     display: none;
+  }
+  .navbar__menu.open {
+    display: block;
   }
   .home__icon__bg {
     flex-direction: column;
