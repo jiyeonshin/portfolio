@@ -5,14 +5,14 @@ const navbarHeight = navbar.getBoundingClientRect().height;
 const home = document.querySelector("#home");
 const homeHeight = home.getBoundingClientRect().height;
 
-const navbarChangeHeight = homeHeight - navbarHeight;
-
+//const navbarChangeHeight = homeHeight - navbarHeight;
+console.log("navbar : =>",navbarHeight);
 // navbar backgrond color change when scrolling
 document.addEventListener("scroll", () => {
-  if (window.scrollY > navbarChangeHeight) {
-    navbar.classList.add("navbar__dark");
+  if (window.scrollY > navbarHeight) {
+    navbar.classList.add("navbar--dark");
   } else {
-    navbar.classList.remove("navbar__dark");
+    navbar.classList.remove("navbar--dark");
   }
 });
 
