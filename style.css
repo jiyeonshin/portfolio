@@ -500,4 +500,8 @@ section {
   .project {
     flex-grow: 1;
   }
+  .contact__container {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
