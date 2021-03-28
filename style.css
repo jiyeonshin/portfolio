@@ -472,19 +472,23 @@ section {
 
   /* home section */
   #home {
-    padding: 200px 50px 0 50px;
+    padding: 80px 50px 0 50px;
     height: 600px;
   }
   .home__title {
     font-size: var(--font-medium);
   }
+  .home__icons-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .icon__container {
     width: 130px;
     height: 130px;
+    margin: 3%;
   }
-  .home__icon__bg {
-    flex-direction: column;
-  }
+
   .home__contact {
     font-size: var(--font-small);
     color: var(--color-light-white);
