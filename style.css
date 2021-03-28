@@ -450,7 +450,7 @@ section {
 }
 
 /* For below 768px screen width */
-@media screen and (max-width: 768px) {
+@media screen (min-width: 421px) and (max-width: 768px) {
   /* navbar */
   .navbar__toggle-btn {
     display: block;
