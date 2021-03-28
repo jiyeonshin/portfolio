@@ -168,17 +168,12 @@ section {
   padding: 8px 12px;
   margin: 0 4px;
   border-radius: var(--size-border-radius);
-
-  border: 1px solid transparent;
 }
-
 .navbar__menu__item.active {
-  border: 1px solid var(--color-white);
+  border: 1px solid var(--color-light-white);
 }
-
 .navbar__menu__item:hover {
   background-color: var(--color-serenity);
-  border: 1px solid var(--color-light-white);
 }
 
 /* navbar__toggle-btn */
@@ -265,7 +260,7 @@ section {
   font-size: var(--font-regular);
   font-weight: var(--weight-semi-bold);
   border: 2px solid var(--color-light-white);
-  border-radius: var(--size-border-radius);
+  border-radius: 10px;
   padding: 10px;
 }
 
@@ -309,9 +304,6 @@ section {
 }
 
 /* My work */
-#work {
-  margin-bottom: 100px;
-}
 #work h1 {
   margin-bottom: 50px;
 }
@@ -451,14 +443,12 @@ section {
 
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
-  /* navbar */
   .navbar__toggle-btn {
     display: block;
   }
   #navbar {
     flex-direction: column;
     align-items: flex-start;
-    background-color: #4a4a4a;
   }
   .navbar__menu {
     flex-direction: column;
@@ -466,6 +456,7 @@ section {
     width: 100%;
     display: none;
   }
+<<<<<<< HEAD
   .navbar__menu.open {
     display: block;
   }
@@ -525,6 +516,9 @@ section {
 /* For below 420px screen width */
 @media screen and (max-width: 420px) {
   .home__icons-container {
+=======
+  .home__icon__bg {
+>>>>>>> parent of bdc019e (전반적인 페이지 구동 구현)
     flex-direction: column;
     align-items: center;
   }
@@ -544,6 +538,7 @@ section {
     width: 100%;
     display: none;
   }
+<<<<<<< HEAD
   .navbar__menu.open {
     display: block;
   }
@@ -598,4 +593,6 @@ section {
   .project {
     flex-grow: 1;
   }
+=======
+>>>>>>> parent of bdc019e (전반적인 페이지 구동 구현)
 }
