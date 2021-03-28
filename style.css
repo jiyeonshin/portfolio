@@ -456,6 +456,7 @@ section {
     text-align: center;
     width: 100%;
     display: none;
+    background-color: #4a4a4a;
   }
   .navbar__menu.open {
     display: block;
@@ -465,9 +466,15 @@ section {
   h1 {
     font-size: var(--font-medium);
   }
+  h2 {
+    font-size: var(--font-regular);
+  }
 
   /* home section */
 
+  #home {
+    padding: 50px;
+  }
   .home__title {
     font-size: 2em;
   }
