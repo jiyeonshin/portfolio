@@ -460,7 +460,37 @@ section {
   .navbar__menu.open {
     display: block;
   }
-  .home__icon__bg {
+
+  /* typography */
+  h1 {
+    font-size: var(--font-medium);
+  }
+
+  /* home section */
+
+  .home__title {
+    font-size: 2em;
+  }
+  .home__icons-container {
     flex-direction: column;
+    align-items: center;
+  }
+  .icon__container {
+    width: 130px;
+    height: 130px;
+    margin: 10px;
+  }
+
+  /* skill section */
+  #skills {
+    margin-top: 100px;
+  }
+  .skillset {
+    width: 80%;
+  }
+
+  /* project section */
+  .project {
+    flex-grow: 1;
   }
 }
