@@ -152,13 +152,7 @@ section {
   padding: 0.5%;
   margin: 5px 0 5px 15px;
 }
-.logo__j {
-  color: var(--color-rose-quartz);
-}
 
-.logo__y {
-  color: var(--color-serenity);
-}
 .navbar__menu {
   display: flex;
   font-size: var(--font-regular);
@@ -176,7 +170,13 @@ section {
 .navbar__menu__item:hover {
   background-color: var(--color-serenity);
 }
+.logo__j {
+  color: var(--color-rose-quartz);
+}
 
+.logo__y {
+  color: var(--color-serenity);
+}
 /* navbar__toggle-btn */
 .navbar__toggle-btn {
   position: absolute;
@@ -322,7 +322,7 @@ section {
 .project {
   position: relative;
   width: 280px;
-  height: 250px;
+  height: 220px;
   margin: 10px;
   background-color: var(--color-light-white);
   display: flex;
