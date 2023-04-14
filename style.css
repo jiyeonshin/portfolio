@@ -57,7 +57,7 @@
 
 body {
   margin: 0;
-  font-family: "Maven Pro", sans-serif,"Nanum Gothic Coding", monospace;
+  font-family: "Maven Pro", sans-serif,'Noto Sans KR', sans-serif;
   background: url(./home_icon/entire_bg.png) center/cover no-repeat;
   cursor: default;
 }
