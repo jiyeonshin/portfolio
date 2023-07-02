@@ -13,23 +13,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="main.js" defer></script>    
 </head>
 <body>       
     <!-- NavBar -->
     <nav id="navbar">
-        <div class="navbar__logo">
-            <a id="logo" href="#">
-            <span class="logo__j">J</span>
-            <span class="logo__y">Y</span>
-            </a>
+        <div class="navbar__inner top">
+            <div class="navbar__logo">
+                <a id="logo" href="#">
+                <span class="logo__j">J</span>
+                <span class="logo__y">Y</span>
+                </a>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__menu__item active" data-link="#home">HOME</li>
+                <li class="navbar__menu__item" data-link="#skills">SKILLS</li>
+                <li class="navbar__menu__item" data-link="#work">PROJECTS</li>
+                <li class="navbar__menu__item"data-link="#contact">CONTACT</li>
+            </ul>
         </div>
-        <ul class="navbar__menu">
-            <li class="navbar__menu__item active" data-link="#home">HOME</li>
-            <li class="navbar__menu__item" data-link="#skills">SKILLS</li>
-            <li class="navbar__menu__item" data-link="#work">PROJECTS</li>
-            <li class="navbar__menu__item"data-link="#contact">CONTACT</li>
-        </ul>
+        
 
         <!-- Toggle button -->
         <button class="navbar__toggle-btn">
@@ -40,7 +45,7 @@
     <!-- Home -->
     <section id="home">
         <div class="home__title-container">
-            <h1 class="home__title">I'M FRONT-END DEVELOPER</h1>
+            <h1 class="home__title">WELCOME TO MY PORTFOLIO :)</h1>
             <div class="home__icons-container">
                 <div class="icon__container">
                     <div class="icon icon1"></div>   
@@ -121,43 +126,129 @@
     <section id="work">
         <div class="section section__container">
             <h1>PROJECTS</h1>
-            <div class="work__projects">
-                <a href="https://www.sivillage.com/main/initMain.siv" class="project" target="blank" data-type="front-end">
-                    <img src="imgs/siv_logo.svg" class="project__img"/>
-                    <div class="project__description">
-                        <h3>S.I.VILLAGE</h3>
-                        <p>
-                            신세계 쇼핑몰 리뉴얼 프로젝트 구축
-                        </p>
+            <div class="swiper workSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <h2>신세계 쇼핑몰(S.I.VILLAGE) 리뉴얼 프로젝트 구축</h2>
+                        <div class="project" data-type="front-end">
+                            <img src="./imgs/mockup01.png" class="project__img"/>
+                            <div class="project__description">
+                                <ul>
+                                    <li>
+                                        <p class="title">주요업무</p>
+                                        <p class="contents">웹사이트 전반적인 퍼블리싱 기능 구현</p>
+                                    </li>
+                                    <li>
+                                        <p class="title">기술 스택</p>
+                                        <p class="contents">HTML, SCSS, Javascript, Gulp, git, Jira, Zeplin</p>
+                                    </li>
+                                    <li>
+                                        <p class="title">수상경력</p>
+                                        <p class="contents">IF 디자인 어워드 본상 수상</p>
+                                    </li>
+                                    <li>
+                                        <p class="title">상세 내용</p>
+                                        <p class="contents">HTML, SCSS를 기반 웹/모바일 퍼블리싱 <br>
+                                            웹표준 및 웹접근성 마크업<br>
+                                            Javascript, CSS3 기반 애니메이션 모션 구현<br>
+                                            Javascript를 활용한 UI 인터렉션 구현<br>
+                                            PC/모바일 페이지 제작<br>
+                                            git을 통한 형상관리<br>
+                                            Gulp 시스템 사용<br>
+                                            디자인 툴 사용 (Zeplin)</p>
+                                    </li>
+                                </ul>
+                                <a href="https://www.sivillage.com/main/initMain.siv" target="blank">MOVE</a>
+                            </div>
+                            
+                        </div>
                     </div>
-                </a>
-                <a href="https://www.samsung.com/sec/mobile/galaxy-bespoke/galaxy-z-flip4/" class="project" target="blank" data-type="front-end">
-                    <img src="imgs/logo_samsung.svg" class="project__img samsung"/>
-                    <div class="project__description">
-                        <h3>삼성 언팩 프로젝트</h3>
-                        <p>
-                            삼성 갤럭시 Z 플립4 비스포크 스튜디오 페이지 개발
-                        </p>
+                    <div class="swiper-slide">
+                        <h2>삼성 언팩 프로젝트</h2>
+                        <div class="project" data-type="front-end">
+                            <img src="./imgs/mockup02.png" class="project__img"/>
+                            <div class="project__description">
+                                <ul>
+                                    <li>
+                                        <p class="title">주요업무</p>
+                                        <p class="contents">비스포크 스튜디오 페이지 로컬라이징</p>
+                                    </li>
+                                    <li>
+                                        <p class="title">기술 스택</p>
+                                        <p class="contents">Javascript, SVN</p>
+                                    </li>
+                                    <li>
+                                        <p class="title">상세 내용</p>
+                                        <p class="contents">글로벌 소스 로컬라이징 작업 <br>
+                                            Javascript 기반 제품 데이터 가공<br>
+                                            Javascript 기반 매칭 데이터 출력<br>
+                                            SVN을 통한 형상관리
+                                            </p>
+                                    </li>
+                                </ul>
+                                <a href="https://www.samsung.com/sec/mobile/galaxy-bespoke/galaxy-z-flip4/" target="blank">MOVE</a>
+                            </div>
+                        </div>
                     </div>
-                </a>
-                <a href="https://www.samsungcard-theid.com/" class="project" target="blank" data-type="front-end">
-                    <img src="imgs/samsungcard.png" class="project__img"/>
-                    <div class="project__description">
-                        <h3>삼성카드 THE iD 프로모션</h3>
-                        <p>
-                            퍼블리싱 전담 및 기능 구현
-                        </p>
+                    <div class="swiper-slide">
+                        <h2>삼성카드 THE iD 프로모션</h2>
+                        <div class="project" data-type="front-end">
+                            <img src="./imgs/mockup03.png" class="project__img"/>
+                            <div class="project__description">
+                                <ul>
+                                    <li>
+                                        <p class="title">주요업무</p>
+                                        <p class="contents">퍼블리싱 전담 및 기능 구현</p>
+                                    </li>
+                                    <li>
+                                        <p class="title">기술 스택</p>
+                                        <p class="contents">HTML, CSS3, Javascript, git, photoshop</p>
+                                    </li>
+                                    <li>
+                                        <p class="title">상세 내용</p>
+                                        <p class="contents">HTML, CSS3를 기반 웹/모바일 퍼블리싱<br>
+                                            웹표준 및 웹접근성 마크업<br>
+                                            Javascript, CSS3 기반 애니메이션 모션 구현<br>
+                                            Javascript를 활용한 UI 인터렉션 구현
+                                            git을 통한 형상관리
+                                            </p>
+                                    </li>
+                                </ul>
+                                <a href="https://www.samsungcard-theid.com/"  target="blank">MOVE</a>
+                            </div>
+                        </div>
                     </div>
-                </a>
-                <a href="https://www.samsung.com/jp/watches/galaxy-watch/galaxy-watch5-44mm-silver-lte-sm-r915fzsakdi" class="project" target="blank" data-type="front-end">
-                    <img src="imgs/logo_samsung.svg" class="project__img samsung"/>
-                    <div class="project__description">
-                        <h3>삼성 일본법인 사이트 <br> 마이그레이션</h3>
-                        <p>
-                            일본법인 사이트의 로우코드를 글로벌 사이트에서 동작할 수 있도록 마이그레이션
-                        </p>
+                    <div class="swiper-slide">
+                        <h2>삼성 일본법인 사이트 마이그레이션</h2>
+                        <div class="project" data-type="front-end">
+                            <img src="./imgs/mockup04.png" class="project__img"/>
+                            <div class="project__description">
+                                <ul>
+                                    <li>
+                                        <p class="title">주요업무</p>
+                                        <p class="contents">일본법인 사이트의 로우코드를 글로벌 사이트에서 동작할 수 있도록 마이그레이션</p>
+                                    </li>
+                                    <li>
+                                        <p class="title">기술 스택</p>
+                                        <p class="contents">HTML, CSS3, Javascript, Jira</p>
+                                    </li>
+                                    <li>
+                                        <p class="title">상세 내용</p>
+                                        <p class="contents">HTML, CSS3를 기반 웹/모바일 퍼블리싱 <br>
+                                            웹표준 및 웹접근성 마크업<br>
+                                            미디어쿼리를 이용한 반응형 페이지<br>
+                                            일본 법인에서 관리하던 대부분의 사이트들을 전세계 삼성 사이트를 관리하는 글로벌
+                                            로 페이지 이식하는 작업
+                                            </p>
+                                    </li>
+                                </ul>
+                                <a href="https://www.samsung.com/jp/watches/galaxy-watch/galaxy-watch5-44mm-silver-lte-sm-r915fzsakdi"  target="blank">MOVE</a>
+                            </div>
+                        </div>
                     </div>
-                </a>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
         </div>
         

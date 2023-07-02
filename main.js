@@ -1,5 +1,6 @@
 "use strict";
 const navbar = document.querySelector("#navbar");
+const navbar_inner = document.querySelector(".navbar__inner");
 const navbarHeight = navbar.getBoundingClientRect().height;
 
 const home = document.querySelector("#home");
@@ -9,9 +10,11 @@ const navbarChangeHeight = homeHeight - navbarHeight;
 // navbar backgrond color change when scrolling
 document.addEventListener("scroll", () => {
   if (window.scrollY > navbarHeight) {
-    navbar.classList.add("navbar--dark");
+    navbar_inner.classList.remove("top");
+    navbar.classList.add('bg')
   } else {
-    navbar.classList.remove("navbar--dark");
+    navbar_inner.classList.add("top");
+    navbar.classList.remove('bg')
   }
 });
 
@@ -135,4 +138,17 @@ window.addEventListener('wheel',()=>{
     selectedNavIndex = navItems.length-1;
   }
   selectNavItem(navItems[selectedNavIndex]);
+});
+
+var swiper = new Swiper(".workSwiper", {
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  loop : true,
+  centeredSlides: true,
+  // autoplay: {
+  //   delay: 2500,
+  //   disableOnInteraction: false,
+  // },
 });
